@@ -2,8 +2,13 @@
   "name": "googlebooks-app",
   "version": "1.0.0",
   "main": "server/server.js",
+
+  "engines": {
+    "node": "17.0.1",
+    "npm": "8.1.0"
+  },
   "scripts": {
-    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start": "react-scripts --openssl-legacy-provider start",
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "install": "cd server && npm i && cd ../client && npm i",
     "build": "export NODE_OPTIONS=--openssl-legacy-provider; gatsby build"
