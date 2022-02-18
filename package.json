@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "server/server.js",
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "install": "cd server && npm i && cd ../client && npm i",
     "build": "export NODE_OPTIONS=--openssl-legacy-provider; gatsby build"
