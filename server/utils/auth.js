@@ -20,7 +20,7 @@ signToken: function ({ username, email, _id }) {
   },
 
   authMiddleware: function ({ req }) {
-    // allows token to be sent via req.body, or headers, req.query
+    // allows token to be sent via req.body, headers, or req.query
     let token = req.body.token || req.headers.authorization || req.query.token;
 
     // separate Bearer from token value

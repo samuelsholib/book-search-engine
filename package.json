@@ -23,11 +23,13 @@
   "bugs": {
     "url": "https://github.com/samuelsholib/book-search-engine"
   },
-  
   "dependencies": {
+    "apollo-boost": "^0.4.9",
+    "express": "^4.17.3",
+    "express-graphql": "^0.12.0",
     "if-env": "^1.0.4"
   },
   "devDependencies": {
-    "concurrently": "^5.2.0"
+    "concurrently": "^7.0.0"
   }
 }
